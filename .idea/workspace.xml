@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57247127-3d7e-4791-9bc3-72770094e829" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/controllers/FormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/models/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/BirdService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/CoordinatesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/models/Bird.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/controllers/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/controllers/FormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/BirdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/BirdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/CoordinatesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/CoordinatesService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +160,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682024401914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682026188677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
