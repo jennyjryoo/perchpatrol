@@ -1,4 +1,5 @@
 <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+
   <div>
     <label>Zip Code
       <input type="text"
@@ -6,19 +7,52 @@
       formControlName="zip"
       required>
     </label>
+    <div ng-click>
+      <div *ngIf="form.controls['zip'].invalid && (form.controls['zip'].dirty || form.controls['zip'].touched)">
+        Zip code is required. Enter a 5 digit US zip code.
+      </div>
+    </div>
   </div>
 
   <div>
-    <label>Distance
-      <input type="text"
-      class="form-control"
+    <label for="distance">Distance (km)</label>
+      <input type="radio"
+      name="distance"
       formControlName="distance"
+      value="5"
+      autocomplete="off"
       required>
-    </label>
+        <label for="5">5 km</label>
+      <input type="radio"
+      name="distance"
+      formControlName="distance"
+      value="10"
+      autocomplete="off"
+      required>
+        <label for="10">10 km</label>
+      <input type="radio"
+      formControlName="distance"
+      name="distance"
+      value="15"
+      autocomplete="off"
+      required>
+        <label for="15">15 km</label>
+      <input type="radio"
+      formControlName="distance"
+      name="distance"
+      value="25"
+      autocomplete="off"
+      required>
+        <label for="25">25 km</label>
+    <div ng-click>
+      <div *ngIf="form.controls['distance'].invalid && (form.controls['distance'].dirty || form.controls['distance'].touched)">
+        Enter a distance.
+      </div>
+    </div>
   </div>
 
   <div>
-    <button type="submit">Find Birds!</button>
+    <button type="submit" [disabled]="form.invalid">Find Birds!</button>
   </div>
 </form>
 

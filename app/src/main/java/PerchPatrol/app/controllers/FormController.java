@@ -23,10 +23,14 @@ public class FormController {
 
     @PostMapping("submit")
     public Bird[] submitForm(@RequestBody @Validated Form form, Errors errors) {
-        String zipCode = form.getZip();
-        Location location = coordinatesService.getCoordinates(zipCode);
-        Bird[] birds = birdService.getBirds(location.getLat(), location.getLng(), form.getDistance());
-        return birds;
+        if (!errors.hasErrors()) {
+            String zipCode = form.getZip();
+            Location location = coordinatesService.getCoordinates(zipCode);
+            Bird[] birds = birdService.getBirds(location.getLat(), location.getLng(), form.getDistance());
+            return birds;
+        } else {
+            return new Bird[0];
+        }
     }
 
 }

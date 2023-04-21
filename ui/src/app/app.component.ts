@@ -16,13 +16,15 @@ export class AppComponent implements OnInit {
   form: FormGroup;
   birdList: Bird[];
   message: string = "";
+  zipPattern = "^[0-9]{5}(?:-[0-9]{4})?$";
 
   constructor(private formService: FormService) {
     this.birdList = [];
     this.newForm = new Form;
     this.form = new FormGroup({
       zip: new FormControl('',
-      [Validators.required]),
+      [Validators.required,
+      Validators.pattern(this.zipPattern)]),
       distance: new FormControl('',
       [Validators.required])
     })
@@ -38,12 +40,13 @@ export class AppComponent implements OnInit {
       console.log(this.newForm);
       this.formService.submitForm(this.newForm).subscribe((response: any) => {
         this.birdList = response;
+        if(this.birdList.length === 0) {
+            this.message = "Sorry, there are no birds!";
+        } else {
+          this.message ="";
+        }
         console.log(this.birdList);
       })
-    }
-
-    if(this.birdList.length === 0) {
-        this.message = "Sorry, there are no birds!";
     }
   }
 
