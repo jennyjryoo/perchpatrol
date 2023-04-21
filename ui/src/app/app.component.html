@@ -1,9 +1,18 @@
-<form [formGroup]="form" novalidate>
+<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
   <div>
     <label>Zip Code
       <input type="text"
       class="form-control"
-      formControlName="zipCode"
+      formControlName="zip"
+      required>
+    </label>
+  </div>
+
+  <div>
+    <label>Distance
+      <input type="text"
+      class="form-control"
+      formControlName="distance"
       required>
     </label>
   </div>
@@ -12,3 +21,14 @@
     <button type="submit">Find Birds!</button>
   </div>
 </form>
+
+<div *ngFor="let bird of birdList">
+  <h3>{{bird.comName}}</h3>
+  <li>Scientific Name:  {{bird.sciName}}</li>
+  <li>Observation Date: {{bird.obsDt}}</li>
+  <li>How Many: {{bird.howMany}}</li>
+</div>
+
+<div *ngIf="message !== ''">
+  {{message}}
+</div>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Bird } from '../model/bird';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class FormService {
    }
 
    submitForm(form: any) {
-    return this.http.post<any>(`${this.url}/submit`,form);
+    return this.http.post<Bird[]>(`${this.url}/submit`,form);
    }
+   
 }

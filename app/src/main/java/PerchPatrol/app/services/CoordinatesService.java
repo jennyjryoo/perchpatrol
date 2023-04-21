@@ -13,11 +13,11 @@ public class CoordinatesService {
 
     @Value("${apiKeyZip}")
     String apiKeyZip;
-    public Location getCoordinates(){
+    public Location getCoordinates(String zipCode){
 
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Location location = objectMapper.readValue(new URL("https://www.zipcodeapi.com/rest/"+this.apiKeyZip+"/info.json/91752/degrees"),Location.class);
+            Location location = objectMapper.readValue(new URL("https://www.zipcodeapi.com/rest/"+this.apiKeyZip+"/info.json/"+zipCode+"/degrees"),Location.class);
             return location;
         } catch (IOException e) {
             e.printStackTrace();

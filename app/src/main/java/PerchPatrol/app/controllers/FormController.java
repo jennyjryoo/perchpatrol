@@ -1,15 +1,17 @@
 package PerchPatrol.app.controllers;
 import PerchPatrol.app.models.Bird;
+import PerchPatrol.app.models.Form;
 import PerchPatrol.app.models.Location;
 import PerchPatrol.app.services.BirdService;
 import PerchPatrol.app.services.CoordinatesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.Errors;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("")
 public class FormController {
 
@@ -19,13 +21,12 @@ public class FormController {
     @Autowired
     private BirdService birdService;
 
-    @GetMapping("zip")
-    public Location getLocation() {
-        return coordinatesService.getCoordinates();
+    @PostMapping("submit")
+    public Bird[] submitForm(@RequestBody @Validated Form form, Errors errors) {
+        String zipCode = form.getZip();
+        Location location = coordinatesService.getCoordinates(zipCode);
+        Bird[] birds = birdService.getBirds(location.getLat(), location.getLng(), form.getDistance());
+        return birds;
     }
 
-    @GetMapping("bird")
-    public Bird[] getBirds() {
-        return birdService.getBirds(33.99,-117.53,10);
-    }
 }

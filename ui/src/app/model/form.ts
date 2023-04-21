@@ -1,6 +1,6 @@
 export class Form {
 
-    zipCode: string ="";
+    zip: string ="";
     distance: number = 0;
 
     public constructor(init?: Partial<Form>) {

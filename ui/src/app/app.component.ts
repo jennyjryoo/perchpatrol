@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormControl,  Validators } from '@angular/forms';
 import { Form } from './model/form';
+import { FormService } from './service/form.service';
+import { Bird } from './model/bird';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +10,20 @@ import { Form } from './model/form';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'ui';
+  title = 'Perch Patrol';
 
   newForm: Form;
   form: FormGroup;
+  birdList: Bird[];
+  message: string = "";
 
-  constructor() {
+  constructor(private formService: FormService) {
+    this.birdList = [];
     this.newForm = new Form;
     this.form = new FormGroup({
-      zipCode: new FormControl('',
+      zip: new FormControl('',
+      [Validators.required]),
+      distance: new FormControl('',
       [Validators.required])
     })
   }
@@ -28,6 +35,15 @@ export class AppComponent implements OnInit {
   onSubmit() {
     if (this.form.valid) {
       this.newForm = new Form(this.form.value);
+      console.log(this.newForm);
+      this.formService.submitForm(this.newForm).subscribe((response: any) => {
+        this.birdList = response;
+        console.log(this.birdList);
+      })
+    }
+
+    if(this.birdList.length === 0) {
+        this.message = "Sorry, there are no birds!";
     }
   }
 
