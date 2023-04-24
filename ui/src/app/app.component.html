@@ -1,4 +1,14 @@
+<body>
+<div class="title">
+<img src="assets/perch.png" height="150px" width="auto">
+<h1>Perch Patrol</h1>
+</div>
+
+<div class="form-container">
+  <div class="form-content">
 <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+
+  <p><b>Welcome to Perch Patrol!</b> To get started, enter your zip code and the radius you want to search in. You'll get a list of all the significant bird sightings in your area in the last week.</p>
 
   <div>
     <label>Zip Code
@@ -7,7 +17,7 @@
       formControlName="zip"
       required>
     </label>
-    <div ng-click>
+    <div ng-click class="error">
       <div *ngIf="form.controls['zip'].invalid && (form.controls['zip'].dirty || form.controls['zip'].touched)">
         Zip code is required. Enter a 5 digit US zip code.
       </div>
@@ -44,7 +54,7 @@
       autocomplete="off"
       required>
         <label for="25">25 km</label>
-    <div ng-click>
+    <div ng-click class="error">
       <div *ngIf="form.controls['distance'].invalid && (form.controls['distance'].dirty || form.controls['distance'].touched)">
         Enter a distance.
       </div>
@@ -52,17 +62,25 @@
   </div>
 
   <div>
-    <button type="submit" [disabled]="form.invalid">Find Birds!</button>
+    <button type="submit" [disabled]="form.invalid" class="btn">Find Birds!</button>
   </div>
 </form>
-
-<div *ngFor="let bird of birdList">
-  <h3>{{bird.comName}}</h3>
-  <li>Scientific Name:  {{bird.sciName}}</li>
-  <li>Observation Date: {{bird.obsDt}}</li>
-  <li>How Many: {{bird.howMany}}</li>
 </div>
 
-<div *ngIf="message !== ''">
-  {{message}}
+<div *ngFor="let bird of birdList" class="bird-content">
+  <h3>{{bird.comName}}</h3>
+  <li>Scientific Name:  <i>{{bird.sciName}}</i></li>
+  <li>Seen: {{bird.obsDt}}</li>
+  <li>How Many: {{bird.howMany}}</li>
+</div>
+  <div *ngIf="message !== ''" class="bird-error">
+    {{message}}
+  </div>
+
+</div>
+<br><br><br>
+</body>
+
+<div class="footer">
+  © Jenny Ryoo 2023. Information on bird sightings is sourced from <a href="https://ebird.org">eBird</a>. <a href="https://www.vecteezy.com/free-png/bird">Bird PNG by Vecteezy</a>.
 </div>
