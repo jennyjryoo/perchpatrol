@@ -69,10 +69,17 @@
 
 <div *ngFor="let bird of birdList" class="bird-content">
   <h3>{{bird.comName}}</h3>
-  <li>Scientific Name:  <i>{{bird.sciName}}</i></li>
-  <li>Seen: {{bird.obsDt}}</li>
-  <li>How Many: {{bird.howMany}}</li>
-</div>
+  <div class="column-image">
+    <img src={{bird.image}} width="200px" height="200px">
+    <div class="credit"><a href={{bird.ownerUrl}}><i>Photo Credit</i></a></div></div>
+  <div class="column-text">
+    <li>Scientific Name:  <i>{{bird.sciName}}</i></li>
+    <li>Seen: {{bird.obsDt}}</li>
+    <li>How Many: {{bird.howMany}}</li>
+  </div>
+  
+  </div>
+
   <div *ngIf="message !== ''" class="bird-error">
     {{message}}
   </div>
@@ -82,5 +89,5 @@
 </body>
 
 <div class="footer">
-  © Jenny Ryoo 2023. Information on bird sightings is sourced from <a href="https://ebird.org">eBird</a>. <a href="https://www.vecteezy.com/free-png/bird">Bird PNG by Vecteezy</a>.
+  © Jenny Ryoo 2023. Information on bird sightings is sourced from <a href="https://ebird.org">eBird</a>. <a href="https://www.vecteezy.com/free-png/bird">Bird PNG by Vecteezy</a> Images from Flickr.
 </div>

@@ -4,5 +4,7 @@ export class Bird {
     sciName: string ="";
     obsDt: string ="";
     howMany: string="";
+    image: string="";
+    ownerUrl: string="";
 
 }

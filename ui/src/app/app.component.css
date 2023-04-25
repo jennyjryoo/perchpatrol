@@ -42,7 +42,6 @@ html, body {
     width: 50%;
     min-width: 540px;
     border-radius: 10px;
-    text-align: center;
     background-color: #E1E4D8;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -104,6 +103,13 @@ h1 {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.credit {
+    font-size: 8px;
+    font-family: 'Unbounded', cursive;
+    font-weight: 300;
+    text-align: center;
+  }
+
 .footer {
     font-size: 12px;
     position: fixed;
@@ -114,4 +120,15 @@ h1 {
     font-weight: 300;
     background-color: #E1E4D8;
     text-align: center;
+  }
+
+  .column-text {
+    float: right;
+    width: 70%;
+    text-align: left;
+  }
+
+  .column-image {
+    float: left;
+    width: 30%;
   }
