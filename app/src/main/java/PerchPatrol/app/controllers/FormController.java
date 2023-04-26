@@ -34,15 +34,19 @@ public class FormController {
             Bird[] birds = birdService.getBirds(location.getLat(), location.getLng(), form.getDistance());
             for (Bird bird : birds) {
                 BirdImage image = birdImageService.getImage(bird.getSciName());
+                image.setId(null);
                 String url = "https://live.staticflickr.com/"+image.getServer()+"/"+image.getId()+"_"+image.getSecret()+".jpg";
-                bird.setImage(url);
-                String ownerUrl = "https://www.flickr.com/photos/"+image.getOwner();
-                bird.setOwnerUrl(ownerUrl);
+                if (image.getId() == null) {
+                    bird.setImage("assets/perch.png");
+                } else {
+                    bird.setImage(url);
+                    String ownerUrl = "https://www.flickr.com/photos/"+image.getOwner();
+                    bird.setOwnerUrl(ownerUrl);
+                }
             }
             return birds;
         } else {
             return new Bird[0];
         }
     }
-
 }
