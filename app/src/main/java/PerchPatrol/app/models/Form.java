@@ -5,11 +5,14 @@ public class Form {
     private String zip;
     private int distance;
 
+    private String type;
+
     public Form() {}
 
-    public Form(String zip, int distance) {
+    public Form(String zip, int distance, String type) {
         this.zip = zip;
         this.distance = distance;
+        this.type = type;
     }
 
 
@@ -27,5 +30,13 @@ public class Form {
 
     public void setDistance(int distance) {
         this.distance = distance;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

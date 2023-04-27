@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   birdList: Bird[];
   message: string = "";
   zipPattern = "^[0-9]{5}(?:-[0-9]{4})?$";
+  typePattern = "^(all|notable)$";
 
   constructor(private formService: FormService) {
     this.birdList = [];
@@ -25,6 +26,9 @@ export class AppComponent implements OnInit {
       zip: new FormControl('',
       [Validators.required,
       Validators.pattern(this.zipPattern)]),
+      type: new FormControl('',
+      [Validators.required,
+      Validators.pattern(this.typePattern)]),
       distance: new FormControl('',
       [Validators.required])
     })
@@ -35,6 +39,7 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.form.value);
     if (this.form.valid) {
       this.newForm = new Form(this.form.value);
       console.log(this.newForm);

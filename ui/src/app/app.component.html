@@ -26,6 +26,29 @@
   </div>
 
   <div>
+    <label for="distance">Type</label>
+      <input type="radio"
+      name="type"
+      formControlName="type"
+      value="all"
+      autocomplete="off"
+      required>
+        <label for="5">All birds</label>
+      <input type="radio"
+      name="type"
+      formControlName="type"
+      value="notable"
+      autocomplete="off"
+      required>
+        <label for="10">Only see notable sightings</label>
+    <div ng-click class="error">
+      <div *ngIf="form.controls['type'].invalid && (form.controls['type'].dirty || form.controls['type'].touched)">
+        Select the type of events you'd like to see.
+      </div>
+    </div>
+  </div>
+
+  <div>
     <label for="distance">Distance (km)</label>
       <input type="radio"
       name="distance"
@@ -63,9 +86,10 @@
   </div>
 
   <div>
-    <button type="submit" [disabled]="form.invalid" class="btn">Find Birds!</button>
+    <button type="submit" class="btn">Find Birds!</button>
   </div>
 </form>
+<!-- [disabled]="form.invalid"  -->
 </div>
 
 <div *ngFor="let bird of birdList" class="bird-content">

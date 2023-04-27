@@ -31,10 +31,9 @@ public class FormController {
         if (!errors.hasErrors()) {
             String zipCode = form.getZip();
             Location location = coordinatesService.getCoordinates(zipCode);
-            Bird[] birds = birdService.getBirds(location.getLat(), location.getLng(), form.getDistance());
+            Bird[] birds = birdService.getBirds(location.getLat(), location.getLng(), form.getDistance(), form.getType());
             for (Bird bird : birds) {
                 BirdImage image = birdImageService.getImage(bird.getSciName());
-                image.setId(null);
                 String url = "https://live.staticflickr.com/"+image.getServer()+"/"+image.getId()+"_"+image.getSecret()+".jpg";
                 if (image.getId() == null) {
                     bird.setImage("assets/perch.png");

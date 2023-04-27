@@ -7,9 +7,12 @@
     <list default="true" id="57247127-3d7e-4791-9bc3-72770094e829" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/controllers/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/controllers/FormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/models/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/models/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/BirdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/BirdService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/model/form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/model/form.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/spinner/spinner.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/spinner/spinner.component.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +163,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682538985992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682616121982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
