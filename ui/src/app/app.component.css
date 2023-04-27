@@ -34,26 +34,6 @@ html, body {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.bird-content {
-    border: 2px solid #3B4A3F;
-    margin: 10px;
-    padding-bottom: 10px;
-    display: inline-block;
-    width: 50%;
-    min-width: 540px;
-    border-radius: 10px;
-    background-color: #E1E4D8;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.bird-content h3 {
-    color: #3B4A3F;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
 h1 {
     color: #ffffff;
     font-size: 80px;
@@ -122,13 +102,41 @@ h1 {
     text-align: center;
   }
 
+  .bird-content {
+    border: 2px solid #3B4A3F;
+    width: 50%;
+    min-width: 540px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #E1E4D8;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.bird-content-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.bird-content h3 {
+    color: #3B4A3F;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
   .column-text {
-    float: right;
-    width: 70%;
+    order: 1;
     text-align: left;
+    margin-left: 10px;
   }
 
   .column-image {
-    float: left;
-    width: 30%;
+    order: 0;
+  }
+
+  @media screen and (max-width:1200px) {
+    .bird-content-container {justify-content: center; }
   }

@@ -9,7 +9,7 @@
   <div class="form-content">
 <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
 
-  <p><b>Welcome to Perch Patrol!</b> To get started, enter your zip code and the radius you want to search in. You'll get a list of all the significant bird sightings in your area in the last week.</p>
+  <p><b>Welcome to Perch Patrol!</b> To get started, enter your zip code and the radius you want to search in. You'll get a list of all the bird sightings in your area in the last week.</p>
 
   <div>
     <label>Zip Code
@@ -86,24 +86,25 @@
   </div>
 
   <div>
-    <button type="submit" class="btn">Find Birds!</button>
+    <button type="submit" [disabled]="form.invalid"  class="btn">Find Birds!</button>
   </div>
 </form>
-<!-- [disabled]="form.invalid"  -->
 </div>
 
 <div *ngFor="let bird of birdList" class="bird-content">
   <h3>{{bird.comName}}</h3>
-  <div class="column-image">
-    <img src={{bird.image}} width="200px" height="200px">
-    <div class="credit"><a href={{bird.ownerUrl}}><i>Photo Credit</i></a></div></div>
-  <div class="column-text">
-    <li>Scientific Name:  <i>{{bird.sciName}}</i></li>
-    <li>Seen: {{bird.obsDt}}</li>
-    <li>How Many: {{bird.howMany}}</li>
+  <div class="bird-content-container">
+    <div class="column-text">
+      <li>Scientific Name:  <i>{{bird.sciName}}</i></li>
+      <li>Seen: {{bird.obsDt}}</li>
+      <li>How Many: {{bird.howMany}}</li>
+    </div>
+    <div class="column-image">
+      <img src={{bird.image}} width="200px" height="200px">
+      <div class="credit"><a href={{bird.ownerUrl}}><i>Photo Credit</i></a></div>
+    </div>
   </div>
-  
-  </div>
+</div>
 
   <div *ngIf="message !== ''" class="bird-error">
     {{message}}
