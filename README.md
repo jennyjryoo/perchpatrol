@@ -31,7 +31,7 @@
 </details>
 
 ## About The Project
-![Perch Patrol](https://github.com/jennyjryoo/perchpatrol/ui/src/assets/PerchPatrolSC.png)
+![Perch Patrol](https://github.com/jennyjryoo/perchpatrol/blob/main/ui/src/assets/PerchPatrolSC.png)
 
 
 ### Built With
