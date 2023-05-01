@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57247127-3d7e-4791-9bc3-72770094e829" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/controllers/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/controllers/FormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/BirdImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/BirdImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/CoordinatesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/PerchPatrol/app/services/CoordinatesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +56,11 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="app" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -78,20 +87,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jenny/Projects/OLD&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/jenny/Projects/Perch Patrol",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "trusted.hosts"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Gradle.app [bootRun]">
     <configuration name="C:/Users/jenny/Projects/Perch Patrol/perchpatrol-app [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="AWS_EC2_METADATA_DISABLED, AWS_ACCESS_KEY_ID" value="AKIAYS533PXBFW2TBFGD, AWS_SECRET_KEY=AKIAYS533PXBMEJB6XM2" />
+          </map>
+        </option>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/perchpatrol-app" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -109,10 +127,15 @@
     </configuration>
     <configuration name="app [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="AWS_ACCESS_KEY_ID" value="AKIAYS533PXBN47UNWVR, AWS_SECRET_KEY=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" />
+          </map>
+        </option>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -128,6 +151,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Gradle.app [bootRun]" />
+      <item itemvalue="Gradle.C:/Users/jenny/Projects/Perch Patrol/perchpatrol-app [bootRun]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.app [bootRun]" />
@@ -157,7 +184,12 @@
       </map>
     </option>
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682616642578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682973225484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Perch_Patrol$C__Users_jenny_Projects_Perch_Patrol_perchpatrol_app__bootRun_.ic" NAME="$PROJECT_DIR$/perchpatrol-app [bootRun] Coverage Results" MODIFIED="1682721960263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

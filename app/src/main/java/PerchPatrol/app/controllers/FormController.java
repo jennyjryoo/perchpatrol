@@ -7,6 +7,7 @@ import PerchPatrol.app.services.BirdImageService;
 import PerchPatrol.app.services.BirdService;
 import PerchPatrol.app.services.CoordinatesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
