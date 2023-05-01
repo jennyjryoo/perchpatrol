@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57247127-3d7e-4791-9bc3-72770094e829" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,11 @@
                 <item name="app" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="app" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -128,6 +133,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Gradle.app [bootRun]" />
+      <item itemvalue="Gradle.C:/Users/jenny/Projects/Perch Patrol/perchpatrol-app [bootRun]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.app [bootRun]" />
@@ -158,6 +167,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682616642578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Perch_Patrol$app__bootRun_.ic" NAME="app [bootRun] Coverage Results" MODIFIED="1682976780708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Perch_Patrol$C__Users_jenny_Projects_Perch_Patrol_perchpatrol_app__bootRun_.ic" NAME="$PROJECT_DIR$/perchpatrol-app [bootRun] Coverage Results" MODIFIED="1682721960263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
