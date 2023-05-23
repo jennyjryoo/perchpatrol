@@ -44,7 +44,7 @@
 ## Usage
 
 * Enter your zip code to see all reported bird sightings in your area
-* Search for all birds in the area, or for notable sightingas only
+* Search for all birds in the area, or for notable sightings only
 * View details about each sighting, including the scientific name, a photo of the species, date/time, and number of birds reported.
 
 ## Roadmap
